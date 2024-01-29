@@ -1,0 +1,39 @@
+/* Navbar styling */
+.navbar #first {
+    background-color: lightblue;
+    color: black;
+}
+
+/* Product list styling */
+.main1 {
+    list-style-type: none;
+    height: 100vh;
+    display: flex;
+    flex-wrap: wrap;
+    row-gap: 50px; /* Adjust the gap between items as needed */
+    column-gap: 160px;
+}
+
+/* Product item styling */
+.main1 li {
+    flex: 0 0 calc(25% - 20px); /* Display 4 items in a row with gap */
+    max-width: calc(25% - 20px); /* Ensure each item takes up 25% of the container with gap */
+    padding: 10px;
+    text-align: center;
+}
+
+/* Responsive styles for medium-sized screens */
+@media (max-width: 768px) {
+    .main1 li {
+        flex: 0 0 calc(50% - 20px); /* Display 2 items in a row with gap */
+        max-width: calc(50% - 20px); /* Ensure each item takes up 50% of the container with gap */
+    }
+}
+
+/* Responsive styles for small-sized screens */
+@media (max-width: 576px) {
+    .main1 li {
+        flex: 0 0 100%; /* Display 1 item in a row */
+        max-width: 100%; /* Ensure each item takes up 100% of the container */
+    }
+}
