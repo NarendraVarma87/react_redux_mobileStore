@@ -7,8 +7,8 @@ export default function Navbar() {
   const price = useSelector((state) => state.cartReducer.totalPrice);
 
   return (
-    <nav className="navbar navbar-expand-md fixed-top mx-5" id="first">
-      <a href="#" className="navbar-brand h1">
+    <nav className="navbar navbar-expand-md fixed-top bg-primary mx-5" id="first">
+      <a href="#" className="navbar-brand text-white h1">
         Mobile Store
       </a>
       <button
@@ -20,17 +20,17 @@ export default function Navbar() {
         aria-expanded="false"
         aria-label="Toggle navigator"
       >
-        <span className="navbar-toggler-icon"></span>
+        <span className="navbar-toggler-icon text-white"></span>
       </button>
       <div className="collapse navbar-collapse" id="collapsenavbar">
         <ul className="navbar-nav mx-auto">
           <li className="nav-item text-center mx-5">
-            <a href="#" className="nav-link active btn btn-primary">
+            <a href="#" className="nav-link active btn btn-light">
               Cart Items : {cartCount}
             </a>
           </li>
           <li className="nav-item text-center mx-5">
-            <a href="#" className="nav-link active btn btn-primary">
+            <a href="#" className="nav-link active btn btn-light">
               Total Price : {price}
             </a>
           </li>

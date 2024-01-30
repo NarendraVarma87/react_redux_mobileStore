@@ -6,7 +6,9 @@ function App() {
  
   return (
     <>
-     <Navbar/>
+    <div style={{marginBottom : '100px'}} className='container-fluid'>
+    <Navbar/>
+    </div>
      <Mainpage/>
     </>
   )
