@@ -6,7 +6,7 @@ export default function Navbar() {
   const cartCount  = useSelector((state) => state.cartReducer.cartValue.length)
   const price = useSelector((state) => state.cartReducer.totalPrice)
   return (
-    <div className='navbar'>
+    <div className='navbar container m-5'>
     <nav className="navbar navbar-expand-md  fixed-top mx-5" id='first'>
     <a href="#" className="navbar-brand h1"> Mobile Store</a>
     <button type="button" data-bs-toggle ="collapse" data-bs-target='#collapsenavbar'

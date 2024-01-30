@@ -2,7 +2,7 @@ import React from 'react';
 import Data from './Data';
 import './Style.css';
 import { useDispatch } from 'react-redux';
-import { incrementCart } from '../Redux/CartReducer';
+import { decrementCart, incrementCart } from '../Redux/CartReducer';
 
 export default function Mainpage() {
   const dispatch = useDispatch();
@@ -25,7 +25,14 @@ export default function Mainpage() {
                   }
                 ))
               }}>Add</button>
-              <button className='btn btn-outline-warning my-2 mx-4'>Remove</button>
+              <button className='btn btn-outline-warning my-2 mx-4' onClick={()=>{
+                dispatch(decrementCart(
+                  {
+                    productName : value.brandName +" "+value.model,
+                    productPrice : value.price
+                  }
+                ))
+              }}>Remove</button>
             </div>
           </ul>
         ))}
